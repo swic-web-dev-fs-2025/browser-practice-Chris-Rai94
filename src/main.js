@@ -1,7 +1,9 @@
 import "./style.css";
 
-document.querySelector("#app").innerHTML = `
-  <h1 class="text-3xl font-bold underline">
-    Hello Vite!
-  </h1>
-`;
+// variables
+const clickCount = { count: 0 };
+const name = document.getElementById("name");
+const incrementButton = document.getElementById("up-count");
+const decrementButton = document.getElementById("down-count");
+const resetButton = document.getElementById("reset-count");
+const countDisplay = document.getElementById("click-count");
