@@ -2,7 +2,6 @@ import "./style.css";
 
 // variables
 const clickCount = { count: 0 };
-const name = document.getElementById("name");
 const incrementButton = document.getElementById("up-count");
 const decrementButton = document.getElementById("down-count");
 const resetButton = document.getElementById("reset-count");
