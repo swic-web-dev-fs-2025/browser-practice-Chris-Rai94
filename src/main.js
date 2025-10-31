@@ -13,6 +13,10 @@ const upCount = () => {
   clickCount.count += 1;
   countDisplay.textContent = `Count: ${clickCount.count}`;
 };
-
+const downCount = () => {
+  clickCount.count -= 1;
+  countDisplay.textContent = `Count: ${clickCount.count}`;
+};
 // event listeners
 incrementButton.addEventListener("click", upCount);
+decrementButton.addEventListener("click", downCount);
