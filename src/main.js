@@ -12,14 +12,21 @@ const countDisplay = document.getElementById("click-count");
 const upCount = () => {
   clickCount.count += 1;
   countDisplay.textContent = `Count: ${clickCount.count}`;
+  if (clickCount.count === 10) {
+    document.documentElement.style.backgroundColor = "lightblue";
+  }
 };
 const downCount = () => {
   clickCount.count -= 1;
   countDisplay.textContent = `Count: ${clickCount.count}`;
+  if (clickCount.count < 10) {
+    document.documentElement.style.backgroundColor = "white";
+  }
 };
 const resetCount = () => {
   clickCount.count = 0;
   countDisplay.textContent = `Count: ${clickCount.count}`;
+  document.documentElement.style.backgroundColor = "white";
 };
 // event listeners
 incrementButton.addEventListener("click", upCount);
