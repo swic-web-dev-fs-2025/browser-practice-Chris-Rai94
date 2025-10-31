@@ -7,3 +7,12 @@ const incrementButton = document.getElementById("up-count");
 const decrementButton = document.getElementById("down-count");
 const resetButton = document.getElementById("reset-count");
 const countDisplay = document.getElementById("click-count");
+
+// functions
+const upCount = () => {
+  clickCount.count += 1;
+  countDisplay.textContent = `Count: ${clickCount.count}`;
+};
+
+// event listeners
+incrementButton.addEventListener("click", upCount);
