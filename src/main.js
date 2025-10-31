@@ -7,7 +7,7 @@ const greetingElement = document.getElementById("greeting");
 const button1 = document.getElementById("change-greeting");
 const button2 = document.getElementById("reset-greeting");
 const countElement = document.getElementById("click-count");
-
+const inputElement = document.getElementById("manual-greeting");
 // Function - same logic as console JavaScript
 function updateGreeting() {
   clickCount++;
@@ -24,6 +24,14 @@ const resetGreeting = () => {
   countElement.textContent = `Button clicks: ${clickCount} `;
 };
 
+const manualGreeting = () => {
+  greetingElement.textContent = `${inputElement.value}`;
+  if (inputElement.value === "") {
+    greetingElement.textContent = "Hello, Console JavaScript!";
+  }
+};
+
 // Event listener - this is new! Responds to user interaction
 button1.addEventListener("click", updateGreeting);
 button2.addEventListener("click", resetGreeting);
+inputElement.addEventListener("change", manualGreeting);
